@@ -5,20 +5,21 @@ body {
   font-family: "Poppins";
 }
 
-.header {
+header {
   background-image: url(/assets/Untitled-8.png);
   background-position: center;
   background-size: auto 100%;
+  box-sizing: border-box;
 }
 .navbar {
   position: fixed;
+  box-sizing: border-box;
   top: 0;
   width: 100%;
   padding: 1rem 0rem;
-  box-sizing: border-box;
   font-size: 1rem;
   font-family: "Mukta Malar";
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65), transparent);
 }
 
 .navbar .links {
@@ -47,6 +48,7 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 9rem 0rem 9rem 0rem;
+  box-sizing: border-box;
 }
 
 .hero h1 {
@@ -68,12 +70,14 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 2rem 0rem;
+  box-sizing: border-box;
 }
 
 #about {
   display: flex;
   justify-content: center;
   margin: 3rem auto;
+  box-sizing: border-box;
 }
 
 #about-text {
@@ -135,6 +139,7 @@ button {
   background-position: center;
   background-size: 100% auto;
   color: #ffffff;
+  box-sizing: border-box;
 }
 
 .card-row {
@@ -146,15 +151,45 @@ button {
   width: 17rem;
   height: 15rem;
   background-color: #ffffff;
-  display: inline-block;
-  margin-bottom: 2rem;
+  margin: 0rem 1rem 0rem 0rem;
+}
+.entry-block {
+  margin: 4rem 0rem;
+  text-align: center;
+  height: 800px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.woobox-offer {
+  max-width: 810px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.gallery {
+  max-width: 1200px;
+  padding: 0rem 1rem;
+  margin: auto;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  height: calc(100% - 44px);
+  overflow: hidden;
+}
+.sponsors {
+  max-width: 1200px;
+  padding: 0rem 1rem;
+  margin: auto;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 1200px) {
-  .navbar {
-    margin: 0rem 1rem;
+  .navbar,
+  .hero,
+  #about,
+  .guidelines {
+    padding: 1rem 1rem;
   }
-  .hero {
-    margin: 0rem 1rem;
+  #about-text {
+    padding: 2rem 1rem 0rem 0rem;
   }
 }
