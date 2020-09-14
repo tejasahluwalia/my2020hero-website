@@ -10,9 +10,9 @@
       <div class="links">
         <a href="">#My2020Hero</a>
         <div class="menu">
-          <a href="">GALLERY</a>
-          <a href="">ABOUT US</a>
-          <a href="">CONTACT</a>
+          <a href="#guidelines">SUMIT YOUR PHOTO</a>
+          <a href="#gallery">GALLERY</a>
+          <a href="">RULES</a>
         </div>
       </div>
     </div>
@@ -36,12 +36,12 @@
           similique nostrum incidunt esse, sequi numquam earum laudantium
           recusandae harum quae porro.
         </p>
-        <button>
+        <!-- <button>
           <div class="button">
             <p>read more</p>
             <img src="/assets/arrow-right (1).svg" />
           </div>
-        </button>
+        </button> -->
       </div>
       <div id="about-imgs">
         <div>
@@ -57,8 +57,8 @@
         />
       </div>
     </div>
-    <div class="guidelines">
-      <div class="content">
+    <div class="guidelines-bg">
+      <div class="guidelines content" id="guidelines">
         <p>THINGS TO KNOW</p>
         <h1>Guidelines for <br />Submissions</h1>
         <div class="card-row">
@@ -72,6 +72,7 @@
         >
       </div>
     </div>
+
     <div id="woobox-root"></div>
     <script>
       (function (d, s, id) {
@@ -91,22 +92,42 @@
       </h1>
       <div
         class="woobox-offer"
-        data-offer="f55bb4?entry=1"
+        data-offer="o8yd2s?entry=1"
         data-trigger="enter"
       ></div>
     </div>
-    <div class="gallery">
+    <button class="accordion text-purple">RULES</button>
+    <div class="panel">
+      <p>Lorem ipsum...</p>
+    </div>
+    <div class="gallery content" id="gallery">
       <p class="text-purple">GALLERY</p>
       <h1>Our heroes!</h1>
       <div
         class="woobox-offer"
-        data-offer="f55bb4/gallery"
+        data-offer="o8yd2s/gallery"
         data-trigger="enter"
       ></div>
     </div>
-    <div class="sponsors">
+    <div class="sponsors content">
       <h2>In Collaboration with</h2>
     </div>
     <footer></footer>
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
+        });
+      }
+    </script>
   </body>
 </html>
