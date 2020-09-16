@@ -73,14 +73,14 @@ header {
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  padding: 2rem 1rem;
+  padding: 4rem 1rem;
   box-sizing: border-box;
 }
 
 #about {
   display: flex;
   justify-content: center;
-  margin: 3rem auto;
+  margin: auto;
   box-sizing: border-box;
 }
 
@@ -141,8 +141,8 @@ button {
 
 .guidelines {
   color: #ffffff;
-  box-sizing: border-box;
-  width: inherit;
+  position: relative;
+  padding: 4rem 1rem;
 }
 
 .guidelines-bg {
@@ -153,17 +153,29 @@ button {
 
 .card-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.card-row-sm {
+  display: none;
 }
 
 .guideline-cards {
   flex: 0 0 17rem;
+  width: 17rem;
   height: 15rem;
   background-color: #ffffff;
   box-sizing: border-box;
+  color: black;
 }
+
+.guidelines span {
+  margin-top: 2rem;
+  position: absolute;
+  bottom: 1rem;
+}
+
 .entry-block {
-  margin: 4rem 0rem;
   text-align: center;
   height: 1000px;
   overflow: hidden;
@@ -186,6 +198,11 @@ button {
   box-sizing: border-box;
 }
 
+.sponsors .row {
+  display: flex;
+  flex-direction: row;
+}
+
 .accordion {
   background-color: #dfdfdf;
   color: #5863f8;
@@ -197,9 +214,26 @@ button {
   transition: 0.4s;
 }
 
-.gac {
-  width: 800px;
-  margin: auto;
+footer {
+  background-color: #121212;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 4rem 2rem 4rem;
+}
+
+footer .info {
+  max-width: 30rem;
+  flex-direction: column;
+}
+
+footer div {
+  display: flex;
+  flex-direction: row;
+}
+
+footer ul {
+  list-style-type: none;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -230,11 +264,47 @@ button {
 @media screen and (max-width: 1200px) {
   .navbar,
   .hero,
-  #about,
-  .guidelines {
+  #about {
     padding: 1rem 1rem;
   }
   #about-text {
     padding: 2rem 1rem 0rem 0rem;
+  }
+  .guideline-cards {
+    flex: 0 1 14rem;
+    height: 12rem;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  h1 {
+    font-size: 2rem;
+  }
+  .guideline-cards {
+    flex: 0 1 12.5rem;
+    height: 11.5rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .hero h1 {
+    font-size: 3.5rem;
+    letter-spacing: 0px;
+    margin: 6rem 0rem 0rem 0rem;
+    line-height: 5rem;
+  }
+
+  .hero p {
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+    margin: 0px;
+    letter-spacing: 0px;
+  }
+  .card-row-sm {
+    display: block;
+  }
+
+  .card-row {
+    display: none;
   }
 }
