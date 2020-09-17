@@ -3,13 +3,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css" />
-    <link
-      rel="stylesheet"
-      href="owlcarousel/assets/owl.theme.default.min.css"
-    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/splide/js/splide.min.js"></script>
+    <link rel="stylesheet" href="/splide/css/splide.min.css" />
     <title>My2020Hero</title>
   </head>
   <body>
@@ -30,8 +26,8 @@
         <p>Global Virtual Exhibition</p>
       </div>
     </header>
-    <div id="about" class="content">
-      <div id="about-text">
+    <div id="about" class="about content">
+      <div class="about-text">
         <p class="text-purple">ABOUT #My2020Hero</p>
         <h1>
           Discovering Heroes <br />
@@ -50,7 +46,7 @@
           </div>
         </button> -->
       </div>
-      <div id="about-imgs">
+      <div class="about-imgs">
         <div>
           <img
             srcset="/assets/85.png, /assets/85@2x.png"
@@ -69,11 +65,23 @@
         <p>THINGS TO KNOW</p>
         <h1>Guidelines for <br />Submissions</h1>
         <div class="card-row-sm">
-          <div class="owl-carousel">
-            <div class="guideline-cards">1</div>
-            <div class="guideline-cards">2</div>
-            <div class="guideline-cards">3</div>
-            <div class="guideline-cards">4</div>
+          <div id="splide" class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <div class="guideline-cards">1</div>
+                </li>
+                <li class="splide__slide">
+                  <div class="guideline-cards">2</div>
+                </li>
+                <li class="splide__slide">
+                  <div class="guideline-cards">3</div>
+                </li>
+                <li class="splide__slide">
+                  <div class="guideline-cards">4</div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <div class="card-row">
@@ -114,7 +122,12 @@
     </div>
     <button class="accordion text-purple">RULES</button>
     <div class="panel">
-      <p>Lorem ipsum...</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum velit
+        quae doloribus molestiae beatae ratione soluta est omnis, corporis amet
+        distinctio eligendi enim necessitatibus, perspiciatis autem ipsam
+        aperiam nostrum voluptatum?
+      </p>
     </div>
     <div class="gallery content" id="gallery">
       <p class="text-purple">GALLERY</p>
@@ -178,22 +191,23 @@
         });
       }
 
-      $(document).ready(function () {
-        $(".owl-carousel").owlCarousel({
+      document.addEventListener("DOMContentLoaded", function () {
+        new Splide(".splide", {
+          rewind: true,
           autoWidth: true,
-          center: true,
-          margin: 32,
-          nav: true,
-          dots: false,
-          responsive: {
+          focus: "center",
+          trimSpace: false,
+          gap: "4rem",
+          pagination: false,
+          breakpoints: {
             0: {
-              items: 2,
+              parPage: 1,
             },
             500: {
-              items: 2,
+              perPage: 2,
             },
           },
-        });
+        }).mount();
       });
     </script>
   </body>
