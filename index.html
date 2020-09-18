@@ -120,15 +120,20 @@
         data-trigger="enter"
       ></div>
     </div>
-    <button class="accordion text-purple">RULES</button>
-    <div class="panel">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum velit
-        quae doloribus molestiae beatae ratione soluta est omnis, corporis amet
-        distinctio eligendi enim necessitatibus, perspiciatis autem ipsam
-        aperiam nostrum voluptatum?
-      </p>
+    <div style="background-color: #d3d3d3">
+      <div id="rules" class="content">
+        <details>
+          <summary>
+            <span class="text-purple" style="font-size: 1.5rem">RULES</span>
+          </summary>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur,
+          illum ad maxime dolorum mollitia modi quae amet. Temporibus alias
+          perferendis dolor molestias, earum vero quidem, doloribus deleniti,
+          eaque neque saepe!
+        </details>
+      </div>
     </div>
+
     <div class="gallery content" id="gallery">
       <p class="text-purple">GALLERY</p>
       <h1>Our heroes!</h1>
@@ -176,21 +181,6 @@
       </div>
     </footer>
     <script>
-      var acc = document.getElementsByClassName("accordion");
-      var i;
-
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-          } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-          }
-        });
-      }
-
       document.addEventListener("DOMContentLoaded", function () {
         new Splide(".splide", {
           rewind: true,

@@ -239,29 +239,9 @@ footer ul {
   list-style-type: none;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active,
-.accordion:hover {
-  background-color: #dddddd;
-}
-.accordion:after {
-  content: "\02795"; /* Unicode character for "plus" sign (+) */
-  color: #5863f8;
-  position: absolute;
-  font-size: 1rem;
-  right: 2rem;
-}
-
-.active:after {
-  content: "\2796"; /* Unicode character for "minus" sign (-) */
-}
-
-.panel {
-  padding: 4rem 2rem 0rem 2rem;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
+details summary {
+  text-align: center;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1200px) {
