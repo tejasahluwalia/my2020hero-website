@@ -16,6 +16,7 @@ header {
   box-sizing: border-box;
 }
 .navbar {
+  z-index: 100;
   position: fixed;
   box-sizing: border-box;
   top: 0;
@@ -73,7 +74,7 @@ header {
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
   box-sizing: border-box;
 }
 
@@ -163,11 +164,37 @@ button {
 
 .guideline-cards {
   flex: 0 0 17rem;
+  display: flex;
+  flex-direction: column;
   width: 17rem;
   height: 15rem;
   background-color: #ffffff;
   box-sizing: border-box;
   color: black;
+  align-items: center;
+}
+
+.circle {
+  margin: 1rem;
+  height: 4rem;
+  width: 4rem;
+  background-color: #5863f8;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+.guideline-cards h4 {
+  margin: 0px;
+}
+
+.guideline-cards p {
+  margin: 1rem;
 }
 
 .guidelines span {
@@ -178,7 +205,6 @@ button {
 
 .entry-block {
   text-align: center;
-  height: 1000px;
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -244,6 +270,23 @@ details summary {
   cursor: pointer;
 }
 
+#rules {
+  padding: 2rem 1rem;
+}
+
+.footer-links a,
+.contact a {
+  color: #5863f8;
+  text-decoration: none;
+}
+
+.sponsors .row img {
+  padding-right: 2rem;
+  max-height: 10rem;
+  object-fit: contain;
+  max-width: 100%;
+}
+
 @media screen and (max-width: 1200px) {
   .navbar,
   .hero,
@@ -255,7 +298,7 @@ details summary {
   }
   .guideline-cards {
     flex: 0 1 14rem;
-    height: 12rem;
+    height: 14rem;
   }
 }
 
@@ -265,7 +308,7 @@ details summary {
   }
   .guideline-cards {
     flex: 0 1 12.5rem;
-    height: 11.5rem;
+    height: 14rem;
   }
 }
 
@@ -297,6 +340,9 @@ details summary {
 }
 
 @media only screen and (max-width: 680px) {
+  .content {
+    padding: 2rem 1rem;
+  }
   .about {
     flex-direction: column;
   }
