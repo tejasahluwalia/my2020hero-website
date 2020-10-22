@@ -3,33 +3,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>#My2020Hero</title>
-    <meta name="description" content="" />
+    <meta
+      name="#My2020Hero Call for Entries"
+      content="Nationwide call for entries celebrating the everyday heroes in our lives. Organised by CPB Foundation and CII"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
 
       body {
-        font-family: Mukta Malar;
+        font-family: Mukta, Mukta Malar, sans-serif;
         color: #fefefe;
         margin: 0px;
         -webkit-font-smoothing: antialiased; /* Chrome, Safari */
         -moz-osx-font-smoothing: grayscale; /* Firefox */
       }
 
+      .languageSelect {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        padding: 1rem 1rem;
+      }
+
+      .languageSelect a {
+        text-decoration: none;
+        color: #fefefe;
+        padding: 1rem;
+      }
+
       .container {
+        position: relative;
         background-image: linear-gradient(
             rgba(0, 0, 0, 0.75),
             rgba(0, 0, 0, 0.25),
             rgba(0, 0, 0, 0.75)
           ),
-          url(assets/coming_soon_bg.jpg);
+          url(assets/coming_soon_bg_sm.jpg);
         display: flex;
+        background-size: 800px;
         justify-content: center;
         align-items: flex-end;
         height: 100%;
         width: 100%;
       }
 
-      .coming-soon {
+      .comingSoon {
         text-align: center;
         margin-bottom: 10%;
       }
@@ -52,13 +71,50 @@
         font-size: clamp(1rem, -0.875rem + 8.333vw, 3.5rem);
       }
     </style>
+    <script>
+      var language;
+
+      function getLanguage() {
+        localStorage.getItem("language") == null ? setLanguage("en") : false;
+        $.ajax({
+          url: "/language/" + localStorage.getItem("language") + ".json",
+          dataType: "json",
+          async: false,
+          dataType: "json",
+          success: function (lang) {
+            language = lang;
+          },
+        });
+      }
+
+      function setLanguage(lang) {
+        localStorage.setItem("language", lang);
+        getLanguage();
+        updateDoc();
+      }
+
+      $(document).ready(function () {
+        getLanguage();
+        updateDoc();
+      });
+
+      function updateDoc() {
+        $("#comingSoon_h1").text(language.comingSoon_h1);
+        $("#comingSoon_h3").text(language.comingSoon_h3);
+      }
+    </script>
   </head>
   <body>
     <div class="container">
-      <div class="coming-soon">
-        <h1>#My2020Hero</h1>
+      <div class="languageSelect">
+        <a href="#" onclick="setLanguage('en')">English</a>
+        <a href="#" onclick="setLanguage('ta')">Tamil</a>
+        <a href="#" onclick="setLanguage('hi')">Hindi</a>
+      </div>
+      <div class="comingSoon">
+        <h1 id="comingSoon_h1"></h1>
         <!-- <h2>Nationwide Call for Entries</h2> -->
-        <h3>Launching Soon</h3>
+        <h3 id="comingSoon_h3"></h3>
       </div>
     </div>
   </body>
