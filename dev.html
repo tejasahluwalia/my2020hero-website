@@ -7,38 +7,82 @@
     <script src="/splide/js/splide.min.js"></script>
     <link rel="stylesheet" href="/splide/css/splide.min.css" />
     <title>My2020Hero</title>
+    <script>
+      var language;
+
+      function getLanguage() {
+        localStorage.getItem("language") == null ? setLanguage("en") : false;
+        $.ajax({
+          url: "/language/" + localStorage.getItem("language") + ".json",
+          dataType: "json",
+          async: false,
+          dataType: "json",
+          success: function (lang) {
+            language = lang;
+          },
+        });
+      }
+
+      function setLanguage(lang) {
+        localStorage.setItem("language", lang);
+        getLanguage();
+        updateDoc();
+      }
+
+      $(document).ready(function () {
+        getLanguage();
+        updateDoc();
+      });
+
+      function updateDoc() {
+        $("#navbar_title").text(language.navbar_title);
+        $("#navbar_menu_submit").text(language.navbar_menu_submit);
+        $("#navbar_menu_rules").text(language.navbar_menu_rules);
+        $("#navbar_menu_gallery").text(language.navbar_menu_gallery);
+        $("#hero_title").text(language.hero_title);
+        $("#hero_subtitle_1").text(language.hero_subtitle_1);
+        $("#hero_subtitle_2").text(language.hero_subtitle_2);
+        $("#about_title").text(language.about_title);
+        $("#about_body_1").text(language.about_body_1);
+        $("#about_body_2").text(language.about_body_2);
+        $("#about_body_3").text(language.about_body_3);
+      }
+    </script>
   </head>
   <body>
     <div class="navbar">
       <div class="links">
-        <a href="">#My2020Hero</a>
+        <a href="/" style="font-weight: bold;" id="navbar_title"></a>
         <div class="menu">
-          <a href="#guidelines">SUMIT YOUR PHOTO</a>
-          <a href="#rules">RULES</a>
-          <a href="#gallery">GALLERY</a>
+          <a href="#guidelines" id="navbar_menu_submit"></a>
+          <a href="#rules" id="navbar_menu_rules"></a>
+          <a href="#gallery" id="navbar_menu_gallery"></a>
         </div>
+        <div class="languageSelect">
+          <a href="#" onclick="setLanguage('en')">English</a>
+          <a href="#" onclick="setLanguage('ta')">தமிழ்</a>
+          <a href="#" onclick="setLanguage('hi')">हिंदी</a>
+      </div>
       </div>
     </div>
     <header>
       <div class="hero">
-        <h1>#My2020Hero</h1>
-        <p>Nationwide Open Call</p>
-        <p>Global Virtual Exhibition</p>
+        <h1 id="hero_title"></h1>
+        <p id="hero_subtitle_1"></p>
+        <p id="hero_subtitle_2"></p>
+        <a href="#about">
+           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </a>      
       </div>
     </header>
     <div id="about" class="about content">
       <div class="about-text">
-        <p class="text-purple">ABOUT #My2020Hero</p>
-        <h1>
-          Discovering Heroes <br />
-          in and around us
+        <p class="text-purple" id="about_section"></p>
+        <h1 id="about_title">
         </h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos similique
-          necessitatibus quas inventore earum corrupti. Optio rerum, praesentium
-          similique nostrum incidunt esse, sequi numquam earum laudantium
-          recusandae harum quae porro.
-        </p>
+        <p id="about_body_1"></p>
+        <p id="about_body_2"></p>
+        <p id="about_body_3"></p>
         <!-- <button>
           <div class="button">
             <p>read more</p>
@@ -71,37 +115,34 @@
                 <li class="splide__slide">
                   <div class="guideline-cards">
                     <div class="circle">1</div>
-                    <h4>Take a portrait of your hero</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur</p>
+                    <h4>Click</h4>
+                    <p>Photograph anyone who you consider your hero in 2020</p>
                   </div>
                 </li>
                 <li class="splide__slide">
                   <div class="guideline-cards">
                     <div class="circle">2</div>
-                    <h4>Write their story in 150 words</h4>
+                    <h4>Write</h4>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Laboriosam, alias.
+                      Tell us a little about why they are your hero
                     </p>
                   </div>
                 </li>
                 <li class="splide__slide">
                   <div class="guideline-cards">
                     <div class="circle">3</div>
-                    <h4>Upload to social media</h4>
+                    <h4>Upload</h4>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Laboriosam, alias.
+                      Upload the photo and story via Instagram or Facebook or upload directly on this website
                     </p>
                   </div>
                 </li>
                 <li class="splide__slide">
                   <div class="guideline-cards">
                     <div class="circle">4</div>
-                    <h4>Share your entry</h4>
+                    <h4>Tag</h4>
                     <p>
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Laboriosam, alias.
+                      Share and tag #my2020hero, @chennaiphotobiennale, @followcii 
                     </p>
                   </div>
                 </li>
@@ -112,31 +153,28 @@
         <div class="card-row">
           <div class="guideline-cards" style="margin-right: 1rem">
             <div class="circle">1</div>
-            <h4>Take a portrait of your hero</h4>
-            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <h4>Click</h4>
+            <p>Photograph anyone who you consider your hero in 2020</p>
           </div>
           <div class="guideline-cards" style="margin-right: 1rem">
             <div class="circle">2</div>
-            <h4>Write their story in 150 words</h4>
+            <h4>Write</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Laboriosam, alias.
+              Tell us a little about why they are your hero
             </p>
           </div>
           <div class="guideline-cards" style="margin-right: 1rem">
             <div class="circle">3</div>
-            <h4>Upload to social media</h4>
+            <h4>Upload</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Laboriosam, alias.
+              Upload the photo and story via Instagram or Facebook or upload directly on this website
             </p>
           </div>
           <div class="guideline-cards">
             <div class="circle">4</div>
-            <h4>Share your entry</h4>
+            <h4>Tag</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Laboriosam, alias.
+              Share and tag #my2020hero, @chennaiphotobiennale, @followcii 
             </p>
           </div>
         </div>
@@ -177,14 +215,17 @@
             <span class="text-purple" style="font-size: 1.5rem">RULES</span>
           </summary>
           <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis?</li>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, numquam?</li>
-            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum non sed adipisci?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam, veritatis?</li>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, numquam?</li>
-            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum non sed adipisci?</li>
+            <li>Submissions to #my2020hero is open to Indian residents above the age of 13 only.</li>
+            <li>Entries will be accepted through Facebook, Instagram, Twitter & my2020hero.in during the time period only.</li>
+            <li>The caption must include: #my2020hero, @[your handle], @chennaiphotobiennale, @followcii in the first line.</li>
+            <li>The photo has to be taken by the person making the submission.</li>
+            <li>The story must belong to 2020. The photo itself could have been taken at any time.</li>
+            <li>The story must be between 50 - 150 words in any Indian language</li>
+            <li>Photos of children can be submitted only with consent from their parent or guardian. By submitting photos of children you expressly agree that you have secured permission from the child’s parent or guardian.</li>
+            <li>You must have prior consent to use the photo of the person you have photographed for this purpose. Any copyright violations or issues with permission will disqualify your entry.</li>
+            <li>Any issues arising out of sharing of the photo will be the liability of the photographer and the subject. The organisers are not liable to any dispute arising out of the submission</li>
+            <li>Photos must not contain any nudity, or any derogatory, racist commentary or visuals. Such entries will not be considered.</li>
+            <li>You can share your entry and ask your friends and family to vote. One vote per person is allowed. Any manipulation of voting will result in disqualification of the entry.</li>
           </ul>
         </details>
       </div>

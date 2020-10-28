@@ -14,6 +14,7 @@ header {
   background-position: center;
   background-size: auto 100%;
   box-sizing: border-box;
+  height: 50%;
 }
 .navbar {
   z-index: 100;
@@ -24,7 +25,7 @@ header {
   padding: 1rem 0rem;
   font-size: 1rem;
   font-family: "Mukta Malar";
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.65), transparent);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent);
 }
 
 .navbar .links {
@@ -36,13 +37,14 @@ header {
 
 .menu a {
   display: inline-block;
-  padding-left: 1rem;
   font-family: "Poppins";
+  font-weight: bold;
 }
 
 .navbar a {
   color: #ffffff;
   text-decoration: none;
+  padding: 0rem 1rem;
 }
 
 .hero {
@@ -50,23 +52,30 @@ header {
   text-decoration: none;
   font-family: "Mukta Malar";
   width: 100%;
+  height: 100%;
   max-width: 1200px;
   margin: auto;
-  padding: 9rem 0rem 9rem 0rem;
+  padding: 1rem;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero a {
+  display: none;
 }
 
 .hero h1 {
   font-size: 4.5rem;
   letter-spacing: 0px;
-  margin: 6rem 0rem 0rem 0rem;
+  margin: 0.5rem 1rem;
   line-height: 5.5rem;
 }
 
 .hero p {
   line-height: 1.8rem;
   font-size: 1.5rem;
-  margin: 0px;
+  margin: 0rem 1rem;
   letter-spacing: 0px;
 }
 
@@ -86,7 +95,7 @@ header {
 }
 
 .about-text {
-  padding: 5rem 5rem 5rem 0rem;
+  padding: 2rem 3rem 2rem 0rem;
   flex-basis: 50%;
 }
 
@@ -228,6 +237,7 @@ button {
 .sponsors .row {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .accordion {
@@ -300,6 +310,14 @@ details summary {
     flex: 0 1 14rem;
     height: 14rem;
   }
+  .circle {
+    margin: 0.5rem;
+    height: 3rem;
+    width: 3rem;
+    padding: 0.5rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -310,13 +328,16 @@ details summary {
     flex: 0 1 12.5rem;
     height: 14rem;
   }
+
+  .guideline-cards p {
+    font-size: 0.9rem;
+  }
 }
 
 @media only screen and (max-width: 800px) {
   .hero h1 {
     font-size: 3.5rem;
     letter-spacing: 0px;
-    margin: 6rem 0rem 0rem 0rem;
     line-height: 5rem;
   }
 
@@ -340,8 +361,40 @@ details summary {
 }
 
 @media only screen and (max-width: 680px) {
+  header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75)),
+      url(/assets/coming_soon_bg_sm.jpg);
+    background-position: center;
+    background-size: auto 100%;
+    box-sizing: border-box;
+    height: auto;
+    text-align: center;
+  }
+
+  .hero {
+    justify-content: flex-end;
+  }
+
+  .hero a {
+    display: block;
+    margin: 0px auto;
+    color: #ffffff;
+  }
+
+  .hero svg {
+    margin-top: 2rem;
+    display: block;
+    height: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero {
+    padding-bottom: 4rem;
+  }
   .content {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
   }
   .about {
     flex-direction: column;
@@ -367,5 +420,13 @@ details summary {
 @media only screen and (max-width: 500px) {
   .navbar {
     font-size: 0.8rem;
+  }
+  .sponsors .row img {
+    padding: 0.5rem;
+    max-height: 4.5rem;
+  }
+  .sponsors .row {
+    align-items: center;
+    justify-content: center;
   }
 }
