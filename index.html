@@ -2,6 +2,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
     <title>#My2020Hero</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -63,8 +81,17 @@
       }
 
       .comingSoon {
-        text-align: center;
+        width: 80%;
         margin-bottom: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+
+      .comingSoon img {
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
       }
 
       h1,
@@ -109,6 +136,11 @@
           right: 0;
           text-align: center;
         }
+        .comingSoon {
+          width: 100%;
+          padding: 0rem 1rem;
+          margin-bottom: 20%;
+        }
       }
     </style>
     <script>
@@ -133,10 +165,10 @@
         updateDoc();
       }
 
-      $(document).ready(function () {
-        getLanguage();
-        updateDoc();
-      });
+      // $(document).ready(function () {
+      //   getLanguage();
+      //   updateDoc();
+      // });
 
       function updateDoc() {
         $("#title").text(language.title);
@@ -146,15 +178,19 @@
   </head>
   <body>
     <div class="container">
-      <div class="languageSelect">
+      <!-- <div class="languageSelect">
         <a href="#" onclick="setLanguage('en')">English</a>
         <a href="#" onclick="setLanguage('ta')">தமிழ்</a>
         <a href="#" onclick="setLanguage('hi')">हिंदी</a>
-      </div>
+      </div> -->
       <div class="comingSoon">
-        <h1 id="title"></h1>
-        <!-- <h2>Nationwide Call for Entries</h2> -->
-        <h3 id="comingSoon_h3"></h3>
+        <img
+          src="/assets/my2020hero_creative2-30.png"
+          alt="#My2020Hero - An online exhibition celebrating real-life heroes - Coming Soon on November 5th"
+        />
+        <!-- <h1 id="title"></h1>
+        <h2>Nationwide Call for Entries</h2>
+        <h3 id="comingSoon_h3"></h3> -->
       </div>
     </div>
   </body>
