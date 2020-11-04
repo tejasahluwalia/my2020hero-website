@@ -94,6 +94,19 @@ header {
   box-sizing: border-box;
 }
 
+.sponsors.content {
+  display: flex;
+  justify-content: space-around;
+  height: auto;
+  flex-direction: column;
+}
+
+.sponsors_top {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .about {
   display: flex;
   justify-content: center;
@@ -245,15 +258,17 @@ footer h4 {
   box-sizing: border-box;
   overflow: hidden;
 }
-.sponsors {
+.sponsors,
+.sponsors_top {
   margin: auto;
   box-sizing: border-box;
 }
 
-.sponsors .row {
+.sponsors .row,
+.sponsors_top .row {
   display: flex;
   flex-direction: row;
-  height: 8rem;
+  max-height: 8rem;
   align-items: center;
 }
 
@@ -276,6 +291,7 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 2rem 4rem 2rem 4rem;
+  box-sizing: border-box;
 }
 
 footer div {
@@ -302,10 +318,11 @@ details summary {
   text-decoration: none;
 }
 
-.sponsors .row img {
-  height: 8rem;
+.sponsors .row img,
+.sponsors_top img {
+  max-height: 8rem;
   object-fit: contain;
-  width: 15rem;
+  max-width: 15rem;
 }
 
 .sponsors h2 {
@@ -449,14 +466,31 @@ details summary {
 
 @media only screen and (max-width: 500px) {
   .navbar {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
-  .sponsors .row img {
-    padding: 0.5rem;
-    max-height: 4.5rem;
+  .sponsors .row img,
+  .sponsors_top img {
+    width: 95%;
   }
+
+  .sponsors_top .row.plat_partner img {
+    width: 80%;
+  }
+
   .sponsors .row {
     align-items: center;
-    justify-content: center;
+  }
+
+  .sponsors h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0px;
+  }
+
+  .sponsors.content {
+    flex-direction: column;
+  }
+
+  .sponsors_top {
+    flex-direction: column;
   }
 }
