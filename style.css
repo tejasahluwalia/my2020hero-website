@@ -307,9 +307,12 @@ footer ul {
   list-style-type: none;
 }
 
-details summary {
-  text-align: center;
-  cursor: pointer;
+.question {
+  font-weight: bold;
+}
+
+.faq div {
+  margin-top: 1rem;
 }
 
 #rules {
