@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -29,6 +30,10 @@
     <script src="/splide/js/splide.min.js"></script>
     <link rel="stylesheet" href="/splide/css/splide.min.css" />
     <title>My2020Hero</title>
+    <meta
+      name="description"
+      content="My2020Hero is a chance to recognise , celebrate and share the stories of real-life heroes."
+    />
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
@@ -76,7 +81,8 @@
         $("#about_title").text(language.about_title);
         $("#about_body_1").text(language.about_body_1);
         $("#about_body_2").text(language.about_body_2);
-        $("#about_body_3").text(language.about_body_3);
+        $("#things_to_know").text(language.things_to_know);
+        $("#guidelines").text(language.guidelines);
       }
 
       $(document).ready(getLanguage());
@@ -91,7 +97,7 @@
           <a href="#rules" id="navbar_menu_rules"></a>
           <a href="#gallery" id="navbar_menu_gallery"></a>
         </div>
-        <div class="languageSelect">
+        <div class="languageSelect" style="display: none">
           <a href="#" onclick="setLanguage('en')">English</a>
           <a href="#" onclick="setLanguage('ta')">தமிழ்</a>
           <a href="#" onclick="setLanguage('hi')">हिंदी</a>
@@ -122,8 +128,16 @@
             </svg>
           </a>
         </div>
-        <img src="/assets/hero_img_1.png" alt="" srcset="" />
-        <img src="/assets/hero_img_2.png" alt="" srcset="" />
+        <img
+          src="/assets/hero_img_2.png"
+          alt="My 2020 Hero Example 1"
+          srcset=""
+        />
+        <img
+          src="/assets/my2020hero.in_BannerImage2.png"
+          alt="My 2020 Hero Example 2"
+          srcset=""
+        />
       </div>
     </header>
     <div id="about" class="content sponsors_top">
@@ -161,7 +175,6 @@
         <h1 id="about_title"></h1>
         <p id="about_body_1"></p>
         <p id="about_body_2"></p>
-        <p id="about_body_3"></p>
         <!-- <button>
           <div class="button">
             <p>read more</p>
@@ -177,16 +190,16 @@
           />
           <img srcset="/assets/home_story.png, /assets/home_story@2x.png" />
         </div>
-        <img
-          srcset="/assets/IMG_5712.png, /assets/IMG_5712@2x.png"
-          style="width: 100%"
-        />
+        <div>
+          <img src="/assets/3.png" style="margin-right: 0.5rem" />
+          <img src="/assets/4.png" />
+        </div>
       </div>
     </div>
     <div class="guidelines-bg">
-      <div class="guidelines content" id="guidelines">
-        <p>THINGS TO KNOW</p>
-        <h1>Guidelines for <br />Submissions</h1>
+      <div class="guidelines content">
+        <p id="things_to_know"></p>
+        <h1 id="guidelines"></h1>
         <div class="card-row-sm">
           <div id="splide" class="splide">
             <div class="splide__track">
