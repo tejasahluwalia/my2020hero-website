@@ -1,0 +1,197 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+    <title>#My2020Hero</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-NY7MEEVKPZ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-NY7MEEVKPZ");
+    </script>
+    <meta
+      name="#My2020Hero Call for Entries"
+      content="Nationwide call for entries celebrating the everyday heroes in our lives. Organised by CPB Foundation and CII"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@200;300;400;500;600;700;800&family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
+
+      body {
+        font-family: Mukta, Mukta Malar, sans-serif;
+        color: #fefefe;
+        margin: 0px;
+        -webkit-font-smoothing: antialiased; /* Chrome, Safari */
+        -moz-osx-font-smoothing: grayscale; /* Firefox */
+      }
+
+      .languageSelect {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        padding: 1rem 1rem;
+      }
+
+      .languageSelect a {
+        text-decoration: none;
+        color: #fefefe;
+        padding: 1rem;
+      }
+
+      .container {
+        position: relative;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.75)
+          ),
+          url(assets/coming_soon_bg_sm.jpg);
+        display: flex;
+        background-size: 800px;
+        justify-content: center;
+        align-items: flex-end;
+        height: 100%;
+        width: 100%;
+      }
+
+      .comingSoon {
+        width: 80%;
+        margin-bottom: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+      }
+
+      .comingSoon img {
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 1rem;
+      }
+
+      h1 {
+        font-size: clamp(1rem, -0.7143rem + 7.619vw, 5rem);
+      }
+
+      h2 {
+        font-size: clamp(2rem, 0.125rem + 8.3333vw, 4.5rem);
+      }
+
+      h3 {
+        font-size: clamp(1rem, -0.875rem + 8.333vw, 3.5rem);
+      }
+
+      @media only screen and (max-width: 480px) {
+        .container {
+          background-size: 550px;
+        }
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        h2 {
+          font-size: 2rem;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+        }
+        .comingSoon {
+          margin-bottom: 20%;
+        }
+        .languageSelect {
+          margin: auto;
+          left: 0;
+          right: 0;
+          text-align: center;
+        }
+        .comingSoon {
+          width: 100%;
+          padding: 0rem 1rem;
+          margin-bottom: 20%;
+        }
+      }
+    </style>
+    <script>
+      var language;
+
+      function getLanguage() {
+        localStorage.getItem("language") == null ? setLanguage("en") : false;
+        $.ajax({
+          url: "/language/" + localStorage.getItem("language") + ".json",
+          dataType: "json",
+          async: false,
+          dataType: "json",
+          success: function (lang) {
+            language = lang;
+          },
+        });
+      }
+
+      function setLanguage(lang) {
+        localStorage.setItem("language", lang);
+        getLanguage();
+        updateDoc();
+      }
+
+      // $(document).ready(function () {
+      //   getLanguage();
+      //   updateDoc();
+      // });
+
+      function updateDoc() {
+        $("#title").text(language.title);
+        $("#comingSoon_h3").text(language.comingSoon_h3);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- <div class="languageSelect">
+        <a href="#" onclick="setLanguage('en')">English</a>
+        <a href="#" onclick="setLanguage('ta')">தமிழ்</a>
+        <a href="#" onclick="setLanguage('hi')">हिंदी</a>
+      </div> -->
+      <div class="comingSoon">
+        <img
+          src="/assets/my2020hero_creative2-30.png"
+          alt="#My2020Hero - An online exhibition celebrating real-life heroes - Coming Soon on November 5th"
+        />
+        <!-- <h1 id="title"></h1>
+        <h2>Nationwide Call for Entries</h2>
+        <h3 id="comingSoon_h3"></h3> -->
+      </div>
+    </div>
+  </body>
+</html>
