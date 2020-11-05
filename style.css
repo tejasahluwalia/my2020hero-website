@@ -88,7 +88,7 @@ header {
 
 .content {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
   padding: 2rem 1rem;
   box-sizing: border-box;
@@ -317,7 +317,7 @@ footer ul {
 }
 
 .faq div {
-  margin-top: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .footer-links a,
@@ -426,6 +426,7 @@ footer ul {
   }
 
   .hero {
+    height: 100vh;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
@@ -450,6 +451,7 @@ footer ul {
 
   .hero h1 {
     font-size: 3rem;
+    line-height: 2rem;
   }
   .hero {
     padding-bottom: 4rem;
@@ -465,6 +467,11 @@ footer ul {
   }
   .about-imgs {
     width: 100%;
+  }
+
+  .entry_block h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   footer {
     padding: 2rem;

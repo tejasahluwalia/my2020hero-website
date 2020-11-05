@@ -83,6 +83,61 @@
         $("#about_body_2").text(language.about_body_2);
         $("#things_to_know").text(language.things_to_know);
         $("#guidelines").text(language.guidelines);
+        $("#slider_click_h4").text(language.slider_click_h4);
+        $("#slider_click_p").text(language.slider_click_p);
+        $("#slider_write_h4").text(language.slider_write_h4);
+        $("#slider_write_p").text(language.slider_write_p);
+        $("#slider_upload_h4").text(language.slider_upload_h4);
+        $("#slider_upload_p").text(language.slider_upload_p);
+        $("#slider_tag_h4").text(language.slider_tag_h4);
+        $("#slider_tag_p").text(language.slider_tag_p);
+        $("#click_h4").text(language.click_h4);
+        $("#click_p").text(language.click_p);
+        $("#write_h4").text(language.write_h4);
+        $("#write_p").text(language.write_p);
+        $("#upload_h4").text(language.upload_h4);
+        $("#upload_p").text(language.upload_p);
+        $("#tag_h4").text(language.tag_h4);
+        $("#tag_p").text(language.tag_p);
+        $("#read_rules").text(language.read_rules);
+        $("#submit_here_1").text(language.submit_here_1);
+        $("#submit_here_2").text(language.submit_here_2);
+        $("#rules_h").text(language.rules_h);
+        $("#rule_1").text(language.rule_1);
+        $("#rule_2").text(language.rule_2);
+        $("#rule_3").text(language.rule_3);
+        $("#rule_4").text(language.rule_4);
+        $("#rule_5").text(language.rule_5);
+        $("#rule_6").text(language.rule_6);
+        $("#rule_7").text(language.rule_7);
+        $("#rule_8").text(language.rule_8);
+        $("#rule_9").text(language.rule_9);
+        $("#rule_10").text(language.rule_10);
+        $("#faq_q1").text(language.faq_q1);
+        $("#faq_a1").text(language.faq_a1);
+        $("#faq_q2").text(language.faq_q2);
+        $("#faq_a2").text(language.faq_a2);
+        $("#faq_q3").text(language.faq_q3);
+        $("#faq_a3").text(language.faq_a3);
+        $("#faq_q4").text(language.faq_q4);
+        $("#faq_a4").text(language.faq_a4);
+        $("#faq_q5").text(language.faq_q5);
+        $("#faq_a5").text(language.faq_a5);
+        $("#faq_q6").text(language.faq_q6);
+        $("#faq_a6").text(language.faq_a6);
+        $("#faq_q7").text(language.faq_q7);
+        $("#faq_a7").text(language.faq_a7);
+        $("#faq_q8").text(language.faq_q8);
+        $("#faq_a8").text(language.faq_a8);
+        $("#faq_q9").text(language.faq_q9);
+        $("#faq_a9").text(language.faq_a9);
+        $("#faq_q10").text(language.faq_q10);
+        $("#faq_a10").text(language.faq_a10);
+        $("#faq_q11").text(language.faq_q11);
+        $("#faq_a11").text(language.faq_a11);
+        $("#faq_q12").text(language.faq_q12);
+        $("#faq_a12").text(language.faq_a12);
+        $("#faq_a13").text(language.faq_a13);
       }
 
       $(document).ready(getLanguage());
@@ -97,7 +152,7 @@
           <a href="#rules" id="navbar_menu_rules"></a>
           <a href="#gallery" id="navbar_menu_gallery"></a>
         </div>
-        <div class="languageSelect" style="display: none">
+        <div class="languageSelect">
           <a href="#" onclick="setLanguage('en')">English</a>
           <a href="#" onclick="setLanguage('ta')">தமிழ்</a>
           <a href="#" onclick="setLanguage('hi')">हिंदी</a>
@@ -207,35 +262,29 @@
                 <li class="splide__slide">
                   <div class="guideline-cards">
                     <div class="circle">1</div>
-                    <h4>Click</h4>
-                    <p>Photograph anyone who you consider your hero in 2020</p>
+                    <h4 id="slider_click_h4"></h4>
+                    <p id="slider_click_p"></p>
                   </div>
                 </li>
                 <li class="splide__slide">
                   <div class="guideline-cards">
                     <div class="circle">2</div>
-                    <h4>Write</h4>
-                    <p>Tell us a little about why they are your hero</p>
+                    <h4 id="slider_write_h4"></h4>
+                    <p id="slider_write_p"></p>
                   </div>
                 </li>
                 <li class="splide__slide">
                   <div class="guideline-cards">
                     <div class="circle">3</div>
-                    <h4>Upload</h4>
-                    <p>
-                      Upload the photo and story via Instagram or Facebook or
-                      upload directly on this website
-                    </p>
+                    <h4 id="slider_upload_h4"></h4>
+                    <p id="slider_upload_p"></p>
                   </div>
                 </li>
                 <li class="splide__slide">
                   <div class="guideline-cards">
                     <div class="circle">4</div>
-                    <h4>Tag</h4>
-                    <p>
-                      Share and tag #my2020hero, @chennaiphotobiennale,
-                      @followcii
-                    </p>
+                    <h4 id="slider_tag_h4"></h4>
+                    <p id="slider_tag_p"></p>
                   </div>
                 </li>
               </ul>
@@ -245,33 +294,28 @@
         <div class="card-row">
           <div class="guideline-cards" style="margin-right: 1rem">
             <div class="circle">1</div>
-            <h4>Click</h4>
-            <p>Photograph anyone who you consider your hero in 2020</p>
+            <h4 id="click_h4"></h4>
+            <p id="click_p"></p>
           </div>
           <div class="guideline-cards" style="margin-right: 1rem">
             <div class="circle">2</div>
-            <h4>Write</h4>
-            <p>Tell us a little about why they are your hero</p>
+            <h4 id="write_h4"></h4>
+            <p id="write_p"></p>
           </div>
           <div class="guideline-cards" style="margin-right: 1rem">
             <div class="circle">3</div>
-            <h4>Upload</h4>
-            <p>
-              Upload the photo and story via Instagram or Facebook or upload
-              directly on this website
-            </p>
+            <h4 id="upload_h4"></h4>
+            <p id="upload_p"></p>
           </div>
           <div class="guideline-cards">
             <div class="circle">4</div>
-            <h4>Tag</h4>
-            <p>Share and tag #my2020hero, @chennaiphotobiennale, @followcii</p>
+            <h4 id="tag_h4"></h4>
+            <p id="tag_p"></p>
           </div>
         </div>
 
         <div style="margin-top: 4rem">
-          <a href="#rules" style="color: white">
-            *Read all the rules before submitting your entries
-          </a>
+          <a href="#rules" style="color: white" id="read_rules"> </a>
         </div>
       </div>
     </div>
@@ -289,10 +333,8 @@
       })(document, "script", "woobox-sdk");
     </script>
     <div class="entry-block content">
-      <h1>
-        Don't use social media? No problem. <br />
-        Submit your photograph here
-      </h1>
+      <h1 id="submit_here_1"></h1>
+      <h1 id="submit_here_2"></h1>
       <div
         class="woobox-offer"
         data-offer="o8yd2s?entry=1"
@@ -303,49 +345,23 @@
       <div id="rules" class="content">
         <div>
           <div style="text-align: center">
-            <span class="text-purple" style="font-size: 1.5rem">RULES</span>
+            <span
+              class="text-purple"
+              style="font-size: 1.5rem"
+              id="rules_h"
+            ></span>
           </div>
           <ul>
-            <li>
-              Submissions to #my2020hero is open to Indian residents above the
-              age of 13 only.
-            </li>
-            <li>
-              Entries will be accepted through Facebook, Instagram, Twitter &
-              my2020hero.in during 5th - 30th November only.
-            </li>
-            <li>
-              The caption must include: #my2020hero, @chennaiphotobiennale,
-              @followcii, @[your handle] to qualify as an entry.
-            </li>
-            <li>
-              The photo has to be taken by the person making the submission.
-            </li>
-            <li>
-              The story must belong to 2020. The photo itself could have been
-              taken at any time.
-            </li>
-            <li>
-              The story must be between 50 - 150 words in any Indian language.
-            </li>
-            <li>
-              By submitting photos of children you expressly agree that you have
-              secured permission from the child’s parent or guardian.
-            </li>
-            <li>
-              You must have prior consent to use the photo of the person you
-              have photographed for this purpose. Any copyright violations or
-              issues with permission will disqualify your entry.
-            </li>
-            <li>
-              Any issues arising out of sharing of the photo will be the
-              liability of the photographer and the subject. The organisers are
-              not liable to any dispute arising out of the submission
-            </li>
-            <li>
-              Photos must not contain any nudity, or any derogatory, racist
-              commentary or visuals. Such entries will not be considered.
-            </li>
+            <li id="rule_1"></li>
+            <li id="rule_2"></li>
+            <li id="rule_3"></li>
+            <li id="rule_4"></li>
+            <li id="rule_5"></li>
+            <li id="rule_6"></li>
+            <li id="rule_7"></li>
+            <li id="rule_8"></li>
+            <li id="rule_9"></li>
+            <li id="rule_10"></li>
           </ul>
         </div>
       </div>
@@ -365,104 +381,61 @@
     <div style="background-color: #d3d3d3">
       <div class="content faq">
         <div style="text-align: center">
-          <span class="text-purple" style="font-size: 1.5rem">FAQs</span>
-        </div>
-        <div>
-          <span class="question">Can I submit a selfie?</span>
-          <br />
-          No. This is about ‘your’ 2020 hero, not about ‘you’!
-        </div>
-        <div>
-          <span class="question">Can I submit a screenshot?</span>
-          <br />
-          Yes, as long as the screenshot has been taken by you.
-        </div>
-
-        <div>
-          <span class="question"
-            >Is there any particular format for the submission?
-          </span>
-          <br />
-          We encourage you to submit photographs in any format as long as it has
-          been taken by you. Either color or black and white photos are welcome!
-        </div>
-        <div>
-          <span class="question"
-            >I used the correct tags and mentions and uploaded my photo and
-            story. Why don’t I see my entry on the website?</span
+          <span class="text-purple" style="font-size: 1.5rem" id="faq_h"
+            >FAQs</span
           >
-          <br />
-          Please allow 24 hours for your entry to appear on the site, since
-          entries are approved manually at 2:00 PM IST everyday. If you do not
-          see your photo, please verify that your entry follows all the rules or
-          contact help@my2020hero.in if you have any other questions.
         </div>
         <div>
-          <span class="question"
-            >I don’t have a professional camera. Can I still enter?</span
-          >
-          <br />
-          Yes! Images from all devices (phones, point and shoot cameras, DSLRs,
-          instant cameras, film) are encouraged.
+          <span class="question" id="faq_q1"></span>
+          <div id="faq_a1"></div>
         </div>
         <div>
-          <span class="question">Is there any fee to enter #My2020Hero?</span>
-          <br />
-          No, it is free to enter #My2020Hero, just be sure to use the correct
-          hashtags and mentions—you can find them in our rules section.
+          <span class="question" id="faq_q2"></span>
+          <div id="faq_a2"></div>
         </div>
         <div>
-          <span class="question"
-            >Are there any qualifications required to submit?</span
-          >
-          <br />
-          #My2020Hero is open to all Indian residents above the age of 13. If
-          you are under 13 and would like to enter, please ask your parents or
-          guardian to enter for you.
+          <span class="question" id="faq_q3"> </span>
+          <div id="faq_a3"></div>
         </div>
         <div>
-          <span class="question"
-            >Can a photo be submitted regardless of when it was taken?</span
-          >
-          <br />
-          The photo can be taken at any time, as long as the story is from 2020
-          and has been submitted during the entry period.
+          <span class="question" id="faq_q4"></span>
+          <div id="faq_a4"></div>
         </div>
         <div>
-          <span class="question"
-            >What happens once I’ve submitted my entry?</span
-          >
-          <br />
-          Once you have submitted your entry please wait for upto 48 hours and
-          check if it has met the approval criteria of the contest - once
-          approved your image will appear on the contest gallery. At the end of
-          the contest period an expert jury will curate the best images for
-          display in an online virtual exhibition. If chosen, we will contact
-          you via social media or email for a high-quality file of your image.
-          The final shortlisted entries will appear on the website.
+          <span class="question" id="faq_q5"></span>
+          <div id="faq_a5"></div>
         </div>
         <div>
-          <span class="question"
-            >I’m not able to upload my photo on the website. What should I
-            do?</span
-          >
-          <br />
-          Please contact help@my2020hero.in if you have any trouble uploading
-          your photo.
+          <span class="question" id="faq_q6"></span>
+          <div id="faq_a6"></div>
         </div>
         <div>
-          <span class="question">How are the entries shortlisted?</span>
-          <br />
-          The top photos will be looked at by a panel of judges.
+          <span class="question" id="faq_q7"></span>
+          <div id="faq_a7"></div>
         </div>
         <div>
-          <span class="question"
-            >When will the shortlist be available and how will I know?</span
-          >
-          <br />
-          The shortlisted entries will be contacted via social media or email
-          and announced on our Instagram and Facebook page and contest website
-          2-3 weeks after the end of the submission period.
+          <span class="question" id="faq_q8"></span>
+          <div id="faq_a8"></div>
+        </div>
+        <div>
+          <span class="question" id="faq_q9"></span>
+          <div id="faq_a9"></div>
+        </div>
+        <div>
+          <span class="question" id="faq_q10"></span>
+          <div id="faq_a10"></div>
+        </div>
+        <div>
+          <span class="question" id="faq_q11"></span>
+          <div id="faq_a11"></div>
+        </div>
+        <div>
+          <span class="question" id="faq_q12"></span>
+          <div id="faq_a12"></div>
+        </div>
+        <div>
+          <span class="question" id="faq_q13"></span>
+          <div id="faq_a13"></div>
         </div>
       </div>
     </div>
