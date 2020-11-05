@@ -312,6 +312,14 @@ footer ul {
   padding: 2rem 1rem;
 }
 
+.question {
+  font-weight: bold;
+}
+
+.faq div {
+  margin-top: 1rem;
+}
+
 .footer-links a,
 .contact a {
   color: #5863f8;
