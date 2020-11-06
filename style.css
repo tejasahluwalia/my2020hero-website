@@ -56,7 +56,7 @@ header {
   height: 100%;
   max-width: 1200px;
   margin: auto;
-  padding: 4rem 1rem;
+  padding: 8rem 1rem;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -107,6 +107,13 @@ header {
   justify-content: center;
 }
 
+.row.plat_partner {
+  display: flex;
+  height: 6rem;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
 .about {
   display: flex;
   justify-content: center;
@@ -273,7 +280,7 @@ footer h4 {
 .sponsors_top .row {
   display: flex;
   flex-direction: row;
-  max-height: 8rem;
+  max-height: 6rem;
   align-items: center;
 }
 
@@ -326,15 +333,27 @@ footer ul {
   text-decoration: none;
 }
 
-.sponsors .row img,
-.sponsors_top img {
+.sponsors .row img {
   max-height: 8rem;
   object-fit: contain;
   max-width: 15rem;
+  margin: auto;
+}
+
+.sponsors_top img {
+  height: 6rem;
+  object-fit: contain;
+  max-width: 15rem;
+  margin: auto;
 }
 
 .sponsors h2 {
   margin-top: 2rem;
+}
+
+.row a {
+  display: inline-block;
+  margin: 0;
 }
 
 @media screen and (max-width: 1200px) {
