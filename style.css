@@ -109,7 +109,6 @@ header {
 
 .row.plat_partner {
   display: flex;
-  height: 6rem;
   align-items: center;
   justify-content: center;
   margin: auto;
@@ -341,9 +340,9 @@ footer ul {
 }
 
 .sponsors_top img {
-  height: 6rem;
+  height: 5rem;
   object-fit: contain;
-  max-width: 15rem;
+  max-width: 12rem;
   margin: auto;
 }
 
