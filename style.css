@@ -355,6 +355,21 @@ footer ul {
   margin: 0;
 }
 
+.social_links a {
+  background-color: #ffffff;
+  border-radius: 50%;
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0rem 1rem;
+}
+
+.social_links img {
+  height: 1.5rem;
+}
+
 @media screen and (max-width: 1200px) {
   .navbar,
   #about {
@@ -530,5 +545,16 @@ footer ul {
 
   .sponsors.content {
     flex-direction: column;
+  }
+
+  .social_links a {
+    height: 2.3rem;
+    width: 2.3rem;
+    margin: 0rem 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .social_links img {
+    height: 1.3rem;
   }
 }
