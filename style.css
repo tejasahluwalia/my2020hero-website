@@ -279,7 +279,6 @@ footer h4 {
 .sponsors_top .row {
   display: flex;
   flex-direction: row;
-  max-height: 6rem;
   align-items: center;
 }
 
