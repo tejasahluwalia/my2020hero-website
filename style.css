@@ -574,11 +574,13 @@ td {
 
   .sponsors .row {
     align-items: center;
+    margin-top: 1rem;
   }
 
   .sponsors h2 {
     font-size: 1.2rem;
     margin-bottom: 0px;
+    margin-top: 1rem;
   }
 
   .sponsors.content {
