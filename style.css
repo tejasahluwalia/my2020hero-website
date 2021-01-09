@@ -381,8 +381,38 @@ footer ul {
   height: 1.5rem;
 }
 
+.prize_list {
+  padding: 2rem;
+  margin-top: 3rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("/assets/prizes_banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  position: relative;
+}
+
+.prize_icons {
+  text-align: center;
+  height: 100%;
+}
+.prize_icon {
+  height: 70px;
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+.credits {
+  font-size: 0.75rem;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  padding: 0.5rem;
+}
+
 .prize_list table {
-  margin: 2rem auto 0rem auto;
+  margin: 2rem auto;
   width: 50%;
   max-width: 50rem;
 }
@@ -399,7 +429,7 @@ footer ul {
 table,
 th,
 td {
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
   border-collapse: collapse;
 }
 
@@ -594,7 +624,23 @@ td {
     margin-bottom: 1rem;
   }
 
+  .credits {
+    font-size: 0.6rem;
+  }
+
   .social_links img {
     height: 1.3rem;
+  }
+
+  .prize_icon {
+    height: 60px;
+  }
+
+  .prize_list h3 {
+    font-size: 1rem;
+  }
+
+  .prize_list p {
+    font-size: 0.85rem;
   }
 }
